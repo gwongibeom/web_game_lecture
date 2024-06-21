@@ -86,10 +86,8 @@ const onMouseMove = (e) => {
 
 canvas.addEventListener('click', (e) => addFruit(e))
 const addFruit = (e) => {
-  if (TempUserMouseLocationCircle != null) {
-    Matter.Composite.remove(world, TempUserMouseLocationCircle)
-  }
   // 과일 INDEX 저장
+
   const fruit = FRUITS[index]
 
   let x = checkX(e.pageX)
