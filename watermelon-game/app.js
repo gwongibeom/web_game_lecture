@@ -133,6 +133,8 @@ Events.on(engine, 'collisionStart', (e) => {
       Matter.Composite.remove(world, collisionEvent.bodyA)
       Matter.Composite.remove(world, collisionEvent.bodyB)
 
+      if (Number(bodyASpriteNum) + 1 > 10) return
+
       const BIGGERFRUITS = FRUITS[Number(bodyASpriteNum) + 1]
 
       const BiggerCircle = Bodies.circle(
