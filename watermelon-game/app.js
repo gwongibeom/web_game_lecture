@@ -129,11 +129,11 @@ Events.on(engine, 'collisionStart', (e) => {
     const bodyASpriteNum = extractNumbers(bodyATexture)
     const bodyBSpriteNum = extractNumbers(bodyBTexture)
 
+    if (Number(bodyASpriteNum) + 1 > 10) return
+
     if (bodyASpriteNum === bodyBSpriteNum) {
       Matter.Composite.remove(world, collisionEvent.bodyA)
       Matter.Composite.remove(world, collisionEvent.bodyB)
-
-      if (Number(bodyASpriteNum) + 1 > 10) return
 
       const BIGGERFRUITS = FRUITS[Number(bodyASpriteNum) + 1]
 
